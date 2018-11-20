@@ -2,9 +2,10 @@
     <section class="col-lg-9">
       <h2>Bienvenue!</h2>
       <h3>Veuillez rentrer vos identifiants pour acceder à votre test.</h3>
+      <!-- need: form action?-->
       <div class="container-fluide">
         <div class="row">
-          <form class="w-75 mx-auto my-5" action="updateProductTreatment.php" method="post">
+          <form class="w-75 mx-auto my-5" action=".php" method="post">
             <div class="form-group">
               <label for="last-name">Nom</label>
               <input type="text" class="form-control" id="last-name" name="last-name"  value="">
