@@ -10,11 +10,11 @@ include "Template/header.php";
 <form class="w-50 mx-auto my-5" action=".php" method="post">
   <div class="form-group">
     <label for="userName">Votre nom</label>
-    <input type="text" class="form-control"  name="first__name" required>
+    <input type="text" class="form-control" id="first__name" name="first__name" required>
   </div>
   <div class="form-group">
     <label for="userName">Votre prenom</label>
-    <input type="text" class="form-control"  name="Last_name" required>
+    <input type="text" class="form-control" id="last_name" name="last_name" required>
   </div>
   <button type="submit" class="btn lightBg">Se connecter</button>
 </form>
