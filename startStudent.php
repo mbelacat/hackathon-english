@@ -1,0 +1,20 @@
+<?php include "Template/headerStudent.php"?>
+
+  <section class="card mx-auto mt-5 w-50">
+    <div class="card-body">
+      <!-- title exams -->
+      <h1 class="text-center m-0 mb-4">TEST D'ANGLAIS</h1>
+      <!-- explanations for question -->
+      <p>Quelques consignes ...<br>
+      <br>
+      Ce test est destiné à mesurer votre niveau de maïtrise de la grammaire, du vocabulaire, et votre compréhension écrite de la langue anglaise.<br>
+      Il sera utilisé lors de votre entretien de motivation et permettra de mesurer votre parcours de formation en fin d'année.<br>
+      Vous devez essayer de répondre au plus grand nombre de questions.<br>
+      Bonne chance !
+      </p>
+      <!-- button OK -->
+      <p class="text-center mt-5"><a href="questionStudent.php" class="btn btn-secondary">Cliquer ici pour commencer le test</a></p>
+    </div>
+  </section>
+
+<?php include "Template/footerStudent.php"?>
