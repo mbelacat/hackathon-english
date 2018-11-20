@@ -22,7 +22,7 @@
   <section class="card mx-auto mt-5" style="width: 50rem;">
     <div class="card-body">
       <!-- title exams -->
-      <h1 class="text-center">TEST D'ANGLAIS</h1>
+      <h1 class="text-center m-0 mb-4">TEST D'ANGLAIS</h1>
       <!-- explanations for question -->
       <p>Quelques consignes ...<br>
       <br>
@@ -32,7 +32,7 @@
       Bonne chance !
       </p>
       <!-- button OK -->
-      <p class="text-center"><a href="questionStudent.php" class="btn btn-secondary">Cliquer ici pour commencer le test</a></p>
+      <p class="text-center mt-5"><a href="questionStudent.php" class="btn btn-secondary">Cliquer ici pour commencer le test</a></p>
     </div>
   </section>
 
