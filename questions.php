@@ -2,9 +2,11 @@
 //Charge the header
 include "Template/header.php";
  ?>
-
+ <!-- Here the "?" will be replace by the information  -->
 <p class="text-center"> Question ? </p>
 
+<!--
+Here the "reponse #" will be replace by the information  -->
 <div class="row">
   <div class="form-check  text-center col-4">
     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
