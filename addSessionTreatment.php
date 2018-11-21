@@ -1,6 +1,6 @@
 <?php
 require "Model/userManager.php";
-require "Model/sessionManager.php";
+require "Model/sessionStudentManager.php";
 ?>
 
 <?php
