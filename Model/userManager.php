@@ -24,7 +24,7 @@ function addUser($user){
   return $result;
 }
 
-function getLastID(){
+function getLastUserID(){
   $db = connectToDataBAse();
   $selectLast = $db->query('SELECT id_user FROM user ORDER BY id_user DESC LIMIT 0, 1');
   $lastId = $selectLast->fetch(PDO::FETCH_ASSOC);
