@@ -2,7 +2,7 @@
 function connectToDataBAse(){
   try
   {
-    $db = new PDO('mysql:host=localhost;dbname=Adep_Anglais;charset=utf8', 'nom_de_compte', 'password');
+    $db = new PDO('mysql:host=localhost;dbname=Adep_Anglais;charset=utf8', 'mbela', 'rootroot');
   }
   catch (Exception $e)
   {
@@ -10,4 +10,5 @@ function connectToDataBAse(){
   }
   return $db;
 }
+var_dump(connectToDataBAse());
 ?>
