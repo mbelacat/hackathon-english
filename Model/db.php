@@ -10,5 +10,4 @@ function connectToDataBAse(){
   }
   return $db;
 }
-var_dump(connectToDataBAse());
 ?>
