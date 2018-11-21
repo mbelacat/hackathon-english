@@ -1,5 +1,6 @@
 <?php require "db.php" ?>
 <?php
+// function to have the one user  ok
 function getUser($lastName) {
   $db = connectToDataBAse();
   $query = $db->prepare("SELECT * FROM user WHERE last_name =  ?");

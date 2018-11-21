@@ -1,5 +1,5 @@
 <!-- need: form action?-->
-<form class="w-50 mx-auto my-5" action=".php" method="post">
+<form class="w-50 mx-auto my-5" action="addSessionTraitement.php" method="post">
   <div class="form-group">
     <label for="userName">Le nom de l'apprenant</label>
     <input type="text" class="form-control"  name="first__name" required>
