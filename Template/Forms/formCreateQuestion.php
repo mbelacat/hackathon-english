@@ -1,8 +1,5 @@
-<!-- On charge le header -->
-<?php include "../header.php"; ?>
-
 <div class="container col-6">
-<!-- form action a remplir quand toutes les pages seront crées-->
+    <!-- form action a remplir quand toutes les pages seront crées-->
     <form action="">
         <!-- Input ou la prof inscrit la question qu'elle va poser lors du quizz -->
         <div class="form-group">
@@ -27,6 +24,3 @@
         <button type="button" class="btn btn-success">Ajouter la question</button>
     </form>
 </div>
-
-<!-- On charge le footer -->
-<?php include "../footer.php"; ?>

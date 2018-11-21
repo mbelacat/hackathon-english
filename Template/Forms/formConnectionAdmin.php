@@ -1,8 +1,3 @@
-<?php
-//On charge le header
-include "Template/header.php";
- ?>
-
 <!-- Form Connection Admin (Secretary/Teacher) -->
 
 <form class="w-50 mx-auto my-5" action=".php" method="post">
@@ -16,8 +11,3 @@ include "Template/header.php";
   </div>
   <button type="submit" class="btn lightBg">Se connecter</button>
 </form>
-
-<?php
-//On charge le footer
-include "Template/footer.php"
- ?>
