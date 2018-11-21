@@ -12,15 +12,15 @@
 
         <!-- Input ou la prof inscrit la bonne réponse -->
         <div class="form-group">
-            <label for="goodreponse">Bonne réponse:</label>
-            <input type="text" class="form-control" id="goodreponse" placeholder="Bonne réponse">
+            <label for="good_answer">Bonne réponse:</label>
+            <input type="text" class="form-control" id="good_answer" placeholder="Bonne réponse">
         </div>
 
         <!-- Input ou la prof inscrit les mauvaises réponses -->
         <div class="form-group">
-            <label for="badreponses">Mauvaises réponses:</label>
-            <input type="text" class="form-control mb-3" id="badreponses" placeholder="Mauvaise réponse 1">
-            <input type="text" class="form-control" id="badreponses" placeholder="Mauvaise réponse 2">
+            <label for="bad_answer">Mauvaises réponses:</label>
+            <input type="text" class="form-control mb-3" id="bad_answer" placeholder="Mauvaise réponse 1">
+            <input type="text" class="form-control" id="bad_answer" placeholder="Mauvaise réponse 2">
         </div>
 
         <!-- Bouton pour ajouter la question -->
