@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -53,3 +54,13 @@
 </body>
 
 </html>
+=======
+<?php
+//On charge le header
+include "Template/header.php";
+//On charge le formulaire de connexion
+include "Template/Forms/formConnectionStudent.php";
+//On charge le footer
+include "Template/footer.php";
+?>
+>>>>>>> 9a484e6869fd9ca0a6387997bfd1213fe8cbabd3

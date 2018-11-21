@@ -1,4 +1,9 @@
-
+<?php
+require "../../Model/db.php";
+require "../../Model/adminManager.php"
+$user = getUsers($db);
+var_dump($user);
+ ?>
 
 <!-- Form Connection Admin (Secretary/Teacher) -->
 
