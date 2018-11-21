@@ -1,5 +1,3 @@
-
-
 <!-- Form Connection Admin (Secretary/Teacher) -->
 
 <div class="container col-5">
@@ -7,8 +5,12 @@
     <!-- Need ! : <form action="? .php" -->
     <form action="">
         <div class="form-group">
-            <label for="user_name">Nom d'utilisateur</label>
-            <input type="text" class="form-control" id="user_name" aria-describedby="nameHelp" placeholder="Entrez votre nom d'utilisateur">
+            <label for="first_name">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="first_name"  placeholder="Entrez votre nom d'utilisateur">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="last_name"  placeholder="Entrez votre nom d'utilisateur">
         </div>
         <div class="form-group">
             <label for="user_password">Mot de passe</label>
