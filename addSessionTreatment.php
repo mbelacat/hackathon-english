@@ -5,7 +5,6 @@ require "Model/sessionManager.php";
 
 <?php
 var_dump($_POST);
- addUser($_POST);
  var_dump(addUser($_POST));
 
 // if(!empty($_POST)) {

@@ -2,16 +2,16 @@
 <!--if error, check path  -->
 <form class="w-50 mx-auto my-5" action="../../addSessionTreatment.php" method="post">
   <div class="form-group">
-    <label for="userName">Le nom de l'apprenant</label>
-    <input type="text" class="form-control"  name="first__name" required>
+    <label for="first_name">Le prenom de l'apprenant</label>
+    <input type="text" class="form-control"  name="first_name" id="first_name" >
   </div>
   <div class="form-group">
-    <label for="userName">Le prenom de l'apprenant</label>
-    <input type="text" class="form-control"  name="Last_name" required>
+    <label for="last_name">Le nom de l'apprenant</label>
+    <input type="text" class="form-control"  name="last_name" id="last_name">
   </div>
   <div class="form-group">
-    <label for="userName">L'adresse mail de l'apprenant</label>
-    <input type="text" class="form-control" name="Mail" required>
+    <label for="mail">L'adresse mail de l'apprenant</label>
+    <input type="text" class="form-control" name="mail" id="mail">
   </div>
   <!-- Le genearateur de clef -->
   <!-- Need ! : le Bouton doit avoir l'action de généré la clef -->
