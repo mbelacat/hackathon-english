@@ -4,30 +4,29 @@ require "Model/sessionStudentManager.php";
 ?>
 
 <?php
-// var_dump($_POST);
-//  var_dump(addUser($_POST));
-//  var_dump(getLastUserID());
-//  $user_id = getLastUserID();
-//  var_dump(addSession($_POST, $user_id));
+var_dump(addUser($_POST));
+var_dump(getLastUserID());
+var_dump(uniqCode(10));
 if(!empty($_POST)) {
    // if $_POST is not empty , we secure the entries
    // clearForm($_POST);
   // we add user to the db
    if(addUser($_POST)){
      $user_id = getLastUserID();
+     $code = uniqCode(10);
   // and we add session to the db
-     if(addSession($_POST, $user_id)){
+     if(addSession($_POST, $user_id, $code)){
       // if addsession is true : we header locate to sessionList.php with success message
        header("Location: sessionList.php?success=La session a bien été ajoutée");
        exit;
     }else{
       // if addsession is false : we header locate to formCreateSession.php
-        header("Location: formCreateSession.php?errors= ici le code erreur");
+        header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
         exit;
      }
    }else{
     // if $_POST is empty : we header locate with error message to formCreateSession.php
-     header("Location: formCreateSession.php?errors= ici le code erreur");
+     header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
      exit;
    }
  }else{
