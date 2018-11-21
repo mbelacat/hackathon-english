@@ -1,7 +1,8 @@
 <?php include "Template/header.php"; ?>
 <div class="container col-5">
     <h3 class="text-center mb-4">Espace administration</h3>
-    <form>
+    <!-- add traitement page in form action -->
+    <form action="">
         <div class="form-group">
             <label for="user_name">Nom d'utilisateur</label>
             <input type="text" class="form-control" id="user_name" aria-describedby="nameHelp" placeholder="Entrez votre nom d'utilisateur">
