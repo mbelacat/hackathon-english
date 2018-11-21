@@ -1,7 +1,4 @@
-<?php
-//On charge le header
-include "Template/header.php";
- ?>
+
 
 <!-- Form Connection Admin (Secretary/Teacher) -->
 
@@ -20,4 +17,3 @@ include "Template/header.php";
         <button type="submit" class="btn btn-primary">Se connecter</button>
     </form>
 </div>
-<?php include "Template/footer.php"; ?>
