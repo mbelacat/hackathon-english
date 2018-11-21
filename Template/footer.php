@@ -1,7 +1,10 @@
 </main>
-<footer class="jumbotron jumbotron-fluid mb-0 mt-5 py-2 darkBg text-center">
+<footer class="footer jumbotron jumbotron-fluid mb-0 mt-5 py-2 darkBg text-center">
   <div class="container">
     <p class="lead">Application servant à évaluer le niveau de l'étudiant avant l'entrée en formation.</p>
+    <i class="far fa-envelope"></i> <a href="mailto:contact@adep-roubaix.fr?subject=Renseignements">contact@adep-roubaix.fr</a>
+    <i class="fab fa-twitter"></i> <a href="https://twitter.com/adeproubaix/">@adeproubaix</a>
+    <i class="fab fa-facebook-f"></i> <a href="https://facebook.com/adeproubaix">ADEPdeRoubaix</a>
   </div>
 </footer>
 
@@ -19,5 +22,4 @@
 </script>
 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
-
 </html>
