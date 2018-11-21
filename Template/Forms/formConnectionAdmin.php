@@ -6,7 +6,6 @@ include "Template/header.php";
 <!-- Form Connection Admin (Secretary/Teacher) -->
 <!-- Need ! : <form action="? .php" -->
 
-
 <form class="w-50 mx-auto my-5" action=".php" method="post">
   <div class="form-group">
     <label for="userName">Votre nom</label>
@@ -18,7 +17,6 @@ include "Template/header.php";
   </div>
   <button type="submit" class="btn lightBg">Se connecter</button>
 </form>
-
 
 <?php
 //On charge le footer
