@@ -17,6 +17,7 @@
             <div class="form-group">
                 <label for="code">Code secret</label>
                 <input type="text" class="form-control" id="code" name="code" value="" >
+                <small id="code" class="form-text text-muted">Votre clé est le code fourni par la secrétaire lors de votre inscription à la session de test</small>
             </div>
             <button type="submit" class="btn lightBg">Accéder au test</button>
           </form>
