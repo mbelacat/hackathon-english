@@ -6,7 +6,7 @@ require "Model/sessionManager.php";
 <?php
 var_dump($_POST);
  var_dump(addUser($_POST));
-
+ var_dump(getLastID());
 // if(!empty($_POST)) {
   // if $_POST is not empty , we secure the entries
   // clearForm($_POST);
