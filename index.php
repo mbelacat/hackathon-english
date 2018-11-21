@@ -6,3 +6,4 @@ include "Template/Forms/formConnectionStudent.php";
 //On charge le footer
 include "Template/footer.php";
 ?>
+
