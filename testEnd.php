@@ -1,6 +1,6 @@
-<?php include "Template/headerStudent.php";?>
+<?php include "Template/header.php";?>
 
-  <section class="card mx-auto mt-5 w-50">
+  <section class="card mx-auto w-50">
     <div class="card-body">
       <!-- text information -->
       <h3 class="text-center">Le test d'Anglais est terminé !</h3><br>
@@ -13,4 +13,4 @@
   </section>
 
 
-<?php include "Template/footerStudent.php";?>
+<?php include "Template/footer.php";?>
