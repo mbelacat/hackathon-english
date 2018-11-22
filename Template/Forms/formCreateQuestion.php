@@ -23,11 +23,4 @@
         <!-- Bouton pour ajouter la question -->
         <button type="button" class="btn btn-success">Ajouter la question</button>
     </form>
-<<<<<<< HEAD
 </div>
-
-<!-- On charge le footer -->
-<?php include "../footer.php"; ?>
-=======
-</div>
->>>>>>> 9a484e6869fd9ca0a6387997bfd1213fe8cbabd3

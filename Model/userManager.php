@@ -1,6 +1,7 @@
 <?php
 // function to have the one user  ok
-function getUser($lastName) {
+function getUser($lastName)
+{
   $db = connectToDataBAse();
   $query = $db->prepare("SELECT * FROM user WHERE last_name =  ?");
   $query->execute([$lastName]);
@@ -9,13 +10,15 @@ function getUser($lastName) {
   return $user;
 }
 
-function getUsers($db){
+function getUsers($db)
+{
   $query = $db->query("SELECT * FROM user");
   $result = $query->fetchall(PDO::FETCH_ASSOC);
   return $result;
 }
 
-function addUser($user){
+function addUser($user)
+{
   $db = connectToDataBAse();
   $query = $db->prepare('INSERT INTO user(first_name, last_name, password, mail, phone, status) VALUES(:first_name, :last_name, :password, :mail, :phone, :status)');
   $result = $query->execute(array(
@@ -29,12 +32,12 @@ function addUser($user){
   return $result;
 }
 
-function getLastUserID(){
+function getLastUserID()
+{
   $db = connectToDataBAse();
   $selectLast = $db->query('SELECT id_user FROM user ORDER BY id_user DESC LIMIT 0, 1');
   $lastId = $selectLast->fetch(PDO::FETCH_ASSOC);
   return $lastId['id_user']; // $lastId['id'] cette variable contient le dernier id<br>
   $selectLast->closeCursor();
 }
-
 ?>

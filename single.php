@@ -1,7 +1,7 @@
 <?php
 //Charge the header
 include "Template/header.php";
- ?>
+?>
 
 
 <!-- Here apprenant's name will be integer in h1 -->
@@ -56,5 +56,5 @@ Here the "?" will be replace by the information  -->
 
  <?php
  //Charge the footer
- include "Template/footer.php"
-  ?>
+ include "Template/footer.php";
+ ?>

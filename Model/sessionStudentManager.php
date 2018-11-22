@@ -1,6 +1,7 @@
 <?php
 // function to have all sessions test
-function getSessions($db) {
+function getSessions($db)
+{
   $db = connectToDataBAse();
   $query = $db->query("SELECT * FROM session");
   $sessions = $query->fetchall(PDO::FETCH_ASSOC);
@@ -8,7 +9,8 @@ function getSessions($db) {
 }
 
 // function to have one session
-function getSession($user_id) {
+function getSession($user_id)
+{
   $db = connectToDataBAse();
   $query = $db->prepare("SELECT * FROM session WHERE user_id=?");
   $query->execute([$user_id]);
@@ -18,7 +20,8 @@ function getSession($user_id) {
 
 // function to add a session to the db
 // function ok for user_id and created_date
-function addSession($session, $user_id, $code) {
+function addSession($session, $user_id, $code)
+{
   $db = connectToDataBAse();
   $query = $db->prepare("INSERT INTO session (user_id, code, created_date, start_qcm_date, end_qcm_date, result, level) VALUES(:user_id, :code, CURDATE(), :start_qcm_date, :end_qcm_date, :result, :level)");
   $result = $query->execute([
@@ -33,11 +36,13 @@ function addSession($session, $user_id, $code) {
 }
 
 //random and unid string
-function uniqCode($car) {
+function uniqCode($car)
+{
   $code = "";
   $option = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
   srand((double)microtime()*1000000);
-  for($i=0; $i<$car; $i++) {
+  for($i=0; $i<$car; $i++)
+  {
     $code .= $option[rand()%strlen($option)];
   }
   return $code;
