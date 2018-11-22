@@ -1,5 +1,6 @@
 
 <?php
+
 function deleteSession($db){
 
 // Here we use the $db = mysqli_connect("localhost", "root", "", "Mydb"); in the Var $link
