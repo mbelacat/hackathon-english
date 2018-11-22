@@ -9,7 +9,6 @@ function clearForm($form)
   return $form;
 }
 //Function qui vérifie si un champ est vide
-<<<<<<< HEAD
 // function isFieldEmpty($form) {
 //   foreach ($form as $key => $value) {
 //     if(empty($value)) {
@@ -19,34 +18,6 @@ function clearForm($form)
 // }
 
 
-=======
-function isFieldEmpty($form)
-{
-  foreach ($form as $key => $value)
-  {
-    if(empty($value))
-    {
-      return "1";
-    }
-  }
-}
-//Function qui vérifie si un champ est trop court
-function isTooShort($value, $length)
-{
-  if(strlen($value) < $length)
-  {
-    return "2";
-  }
-}
-//Function qui vérifie si deux champs sont identiques
-function areIdentical($value1, $value2)
-{
-  if($value1 !== $value2)
-  {
-    return "3";
-  }
-}
->>>>>>> f246d3355a6cd47c11b2f8e048633d13b127df3d
 //Function qui vérifie le respect d'une regex
 function respectPattern($pattern, $value)
 {

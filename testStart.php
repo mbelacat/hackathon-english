@@ -13,7 +13,7 @@
       Bonne chance !
       </p>
       <!-- button OK -->
-      <p class="text-center mt-5"><a href="tests.php" class="btn btn-secondary">Cliquer ici pour commencer le test</a></p>
+      <p class="text-center mt-5"><a href="test.php" class="btn btn-secondary">Cliquer ici pour commencer le test</a></p>
     </div>
   </section>
 

@@ -10,6 +10,7 @@ function getUser($lastName)
   return $user;
 }
 
+// function to have all users
 function getUsers($db)
 {
   $query = $db->query("SELECT * FROM user");
@@ -17,6 +18,7 @@ function getUsers($db)
   return $result;
 }
 
+// function to add a user
 function addUser($user)
 {
   $db = connectToDataBAse();
@@ -32,6 +34,7 @@ function addUser($user)
   return $result;
 }
 
+// fuction to have the last Id enter in the DB
 function getLastUserID()
 {
   $db = connectToDataBAse();
