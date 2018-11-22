@@ -8,9 +8,9 @@ function getReferences() {
     "3" => "Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe",
     "4" => "Nous n'avons aucune session de test avec ce nom et code de session",
     "5" => "Il faut vous identifier pour accéder au contenu",
-    "6" => "Contenu reservé aux administrateurs du site",
+    "6" => "La présence d'un mail ou d'un telphone est obligatoire",
     "7" => "l'etudiant et la session test  n'ont pas été créés",
-    "8" => "Le nom et le prenom doivent être renseignés et La présence d'un mail ou d'un telphone est obligatoire",
+    "8" => "Le nom et le prenom doivent être renseignés",
     "9" => "Le numero de telephone doit contenir 10 chiffres"
   ];
 }

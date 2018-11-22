@@ -15,7 +15,7 @@ function getUsers($db)
 {
   $query = $db->query("SELECT * FROM user");
   $result = $query->fetchall(PDO::FETCH_ASSOC);
-  ->closeCursor();
+  $query->closeCursor();
   return $result;
 }
 
@@ -49,7 +49,7 @@ function getLastUserID()
 function deleteUser($id, $db) {
   $query = $db->prepare("DELETE FROM user WHERE id_user = ?");
   $result = $query->execute([$id]);
-  ->closeCursor();
+  $query->closeCursor();
   return $result;
 }
 

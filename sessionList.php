@@ -9,6 +9,7 @@ $apprenants = getUsers($db);
 $code = getSessions($db);
 
 include "Template/header.php";
+displayMessages();
 ?>
 <table class="table">
   <thead class="thead-dark">
@@ -20,7 +21,7 @@ include "Template/header.php";
       <th scope="col">Supprimer</th>
     </tr>
   </thead>
-  
+
   <tbody>
   <!-- foreach to see all sessions -->
   <?php

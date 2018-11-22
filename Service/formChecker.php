@@ -23,7 +23,7 @@ function respectPattern($pattern, $value)
 {
   if(!preg_match($pattern, $value))
   {
-    return "4";
+    return "9";
   }
 }
 ?>
