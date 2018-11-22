@@ -10,4 +10,5 @@ function connectToDataBAse(){
   }
   return $db;
 }
+
 ?>
