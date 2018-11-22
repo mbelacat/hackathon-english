@@ -8,7 +8,6 @@ function clearForm($form)
   }
   return $form;
 }
-
 //Function qui vérifie si un champ est vide
 function isFieldEmpty($form)
 {
@@ -20,7 +19,6 @@ function isFieldEmpty($form)
     }
   }
 }
-
 //Function qui vérifie si un champ est trop court
 function isTooShort($value, $length)
 {
@@ -29,7 +27,6 @@ function isTooShort($value, $length)
     return "2";
   }
 }
-
 //Function qui vérifie si deux champs sont identiques
 function areIdentical($value1, $value2)
 {
@@ -38,7 +35,6 @@ function areIdentical($value1, $value2)
     return "3";
   }
 }
-
 //Function qui vérifie le respect d'une regex
 function respectPattern($pattern, $value)
 {
