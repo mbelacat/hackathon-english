@@ -20,7 +20,6 @@ if(!empty($_POST)) {
      $errors .= respectPattern("#[0-9]{10}#", $_POST["phone"]);
    }
 
-   var_dump($errors);
    if(!empty($errors)){
      // have we initialize anonymous session?and Why?
          header("Location: createSessionStudent.php?message=$errors");
@@ -33,7 +32,7 @@ if(!empty($_POST)) {
         // and we add session to the db
         if(addSession($_POST, $user_id, $code)){
         // if addsession is true : we header locate to sessionList.php with success message
-            header("Location: sessionList.php?message=Une session pour le test a bien été crée");
+            header("Location: sessionList.php?success=Une session pour le test a bien été crée");
             exit;
         }else{
           // if addsession is false : we header locate to createSessionStudent.php

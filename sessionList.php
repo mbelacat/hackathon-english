@@ -9,7 +9,6 @@ $apprenants = getUsers($db);
 $code = getSessions($db);
 
 include "Template/header.php";
-displayMessages();
 ?>
 <table class="table">
   <thead class="thead-dark">

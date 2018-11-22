@@ -26,15 +26,15 @@ if(!empty($_POST))
       }
       if ($_SESSION["user"]["status"] === "Teacher")
       {
-        header("Location: homeTeacher.php");
+        header("Location: ../../homeTeacher.php");
         exit;
       }
     }
   }
-  header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
+  header("Location: ../index.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
   exit;
 }
 //Si le formulaire n'est pas rempli on renvoie l'utilisateur sur la page de connexion avec un message d'erreur
-header("Location: index.php?message=Vous devez remplir les champs du formulaire");
+header("Location: ../index.php?message=Vous devez remplir les champs du formulaire");
 exit;
 ?>
