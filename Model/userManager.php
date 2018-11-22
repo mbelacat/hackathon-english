@@ -1,4 +1,3 @@
-<?php require "db.php" ?>
 <?php
 // function to have the one user  ok
 function getUser($lastName) {
