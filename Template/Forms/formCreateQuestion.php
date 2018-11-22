@@ -24,4 +24,10 @@
         <!-- Bouton pour ajouter la question -->
         <button type="submit" class="btn btn-success">Valider !</button>
     </form>
+
+</div>
+
+<!-- On charge le footer -->
+<?php include "../footer.php"; ?>
+
 </div>
