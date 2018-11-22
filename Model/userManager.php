@@ -36,4 +36,5 @@ function getLastUserID(){
   return $lastId['id_user']; // $lastId['id'] cette variable contient le dernier id<br>
   $selectLast->closeCursor();
 }
+
 ?>

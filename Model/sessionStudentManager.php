@@ -32,10 +32,7 @@ function addSession($session, $user_id, $code) {
   return $result;
 }
 
-
-
 //random and unid string
-
 function uniqCode($car) {
   $code = "";
   $option = "abcdefghijklmnpqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
