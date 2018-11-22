@@ -3,6 +3,7 @@ session_start();
 require "Model/db.php";
 require "Model/sessionStudentManager.php";
 require "Model/userManager.php";
+// require "deleteSessionTreatment.php";
 $db = connectToDataBAse();
 $apprenants = getUsers($db);
 $code = getSessions($db);
@@ -29,7 +30,22 @@ include "Template/header.php";
     <tr>
       <th scope="row"> <?php echo $result["last_name"] ?> </th>
       <td scope="row"> <?php echo $result["first_name"] ?> </td>
+<<<<<<< HEAD
+<?php
+    }
+
+foreach ($code as $key => $theKey) {
+?>
+
+    <td scope="row">  <?php echo $theKey["code"] ?> </td>
+    <td scope="row"><?php echo $theKey["created_date"] ;  ?> </td>
+    <!-- <i class="fas fa-trash-alt"></i> -->
+    <td scope="row"><a href="<?php echo 'deleteSessionTreatment.php?id=' . $theKey['id_session']; ?>" class="btn btn-danger">Supprimer</a></td>
+</tr>
+<?php
+=======
       <?php
+>>>>>>> f246d3355a6cd47c11b2f8e048633d13b127df3d
   }
     foreach ($code as $key => $theKey)
     {
