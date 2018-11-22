@@ -1,6 +1,6 @@
 <?php
 //On charge le fichier avec les fonctions qui renvoient nos données
-require "Model/db.php";
+require "../Model/db.php";
 $reponses = connectToDataBAse()->query('SELECT * FROM user');
 $reponse = $reponses->fetchall();
 //On vérifie si le formulaire a été rempli
