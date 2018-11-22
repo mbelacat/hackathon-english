@@ -36,4 +36,12 @@ function getLastUserID(){
   return $lastId['id_user']; // $lastId['id'] cette variable contient le dernier id<br>
   $selectLast->closeCursor();
 }
+
+//Fonction for delete a user in bdd
+function deleteUser($id, $db) {
+  $query = $db->prepare("DELETE FROM user WHERE id_user = ?");
+  $result = $query->execute([$id]);
+  return $result;
+}
+
 ?>
