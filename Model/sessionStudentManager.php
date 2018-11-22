@@ -33,6 +33,7 @@ function addSession($session, $user_id, $code)
     "level" => $session["level"]
   ]);
   return $result;
+  $query->closeCursor();
 }
 
 //random and unid string
