@@ -1,15 +1,13 @@
 <?php
 require "Model/userManager.php";
 require "Model/sessionStudentManager.php";
+require "Service/formChecker.php";
 ?>
 
 <?php
-var_dump(addUser($_POST));
-var_dump(getLastUserID());
-var_dump(uniqCode(10));
 if(!empty($_POST)) {
    // if $_POST is not empty , we secure the entries
-   // clearForm($_POST);
+   clearForm($_POST);
   // we add user to the db
    if(addUser($_POST)){
      $user_id = getLastUserID();
