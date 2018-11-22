@@ -1,5 +1,12 @@
 <?php
+require "Model/db.php";
 include "Template/header.php";
+$db = connectToDataBAse();
+
+$query_question = $db->query('SELECT * FROM question');
+
+$question = $query_question->fetchall(PDO::FETCH_ASSOC);
+
  ?>
 
 <section>
@@ -15,12 +22,21 @@ include "Template/header.php";
         <tr>
           <th scope="col">Question</th>
           <th scope="col">Réponse</th>
+          <th scope="col">Options</th>
         </tr>
       </thead>
+      <tbody>
+          <?php foreach ($question as $key => $value) {
+            echo "<tr>";
+            $id_question = $value["id_question"];
+          ?>
+          <td><?php echo $value["question"];?></td>
+          </tr>
+        <?php } ?>
+
     </table>
   </div>
 </section>
-
  <?php
 include "Template/footer.php";
  ?>
