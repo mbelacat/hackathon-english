@@ -1,26 +1,37 @@
+
 <div class="container col-6">
     <!-- form action a remplir quand toutes les pages seront crées-->
-    <form action="">
+    <form method="post" action="createQuestionTraitement.php">
         <!-- Input ou la prof inscrit la question qu'elle va poser lors du quizz -->
         <div class="form-group">
             <label for="question">Question:</label>
-            <input type="text" class="form-control" id="question" placeholder="Question">
+            <input type="text" class="form-control" id="question" name="question" placeholder="Question">
         </div>
 
         <!-- Input ou la prof inscrit la bonne réponse -->
         <div class="form-group">
-            <label for="good_answer">Bonne réponse:</label>
-            <input type="text" class="form-control" id="good_answer" placeholder="Bonne réponse">
+            <label for="goodreponse">Bonne réponse:</label>
+            <input type="text" class="form-control" id="goodreponse" name="reponse" placeholder="Bonne réponse">
         </div>
 
         <!-- Input ou la prof inscrit les mauvaises réponses -->
-        <div class="form-group">
-            <label for="bad_answer">Mauvaises réponses:</label>
-            <input type="text" class="form-control mb-3" id="bad_answer" placeholder="Mauvaise réponse 1">
-            <input type="text" class="form-control" id="bad_answer" placeholder="Mauvaise réponse 2">
-        </div>
+        <!-- <div class="form-group">
+            <label for="badreponses">Mauvaises réponses:</label>
+            <input type="text" class="form-control mb-3" id="badreponses" placeholder="Mauvaise réponse 1">
+            <input type="text" class="form-control" id="badreponses" placeholder="Mauvaise réponse 2">
+        </div> -->
 
         <!-- Bouton pour ajouter la question -->
-        <button type="button" class="btn btn-success">Ajouter la question</button>
+        <button type="submit" class="btn btn-success">Valider !</button>
     </form>
+<<<<<<< HEAD
+
 </div>
+
+<!-- On charge le footer -->
+<?php include "../footer.php"; ?>
+
+</div>
+=======
+</div>
+>>>>>>> 2f6432312e5ab974529bfb6304f27a35cda0b44a
