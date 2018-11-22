@@ -1,35 +1,35 @@
 <?php
+//On charge le fichier avec les fonctions qui renvoient nos données
 require "Model/db.php";
-require "Model/userManager.php";
- ?>
- <?php
- // Verify if form is not empty.
- if(!empty($_POST)) {
-   // Clean form's entry
-   foreach ($_POST as $key => $value) {
-     $_POST[$key] = htmlspecialchars($value);
-   }
-   //On récupère les utilisateurs stockés sur le site (ici pour l'exercice ils sont stockés dans une fonction)
-   $user = getAdmin($bdd,$_POST["first_name"],$_POST["last_name"]);
-   $password_OK = password_verify( $_POST["user_password"], $user["password"]);
-
-
-
-   if($password_OK) {
-     //Si c'est le cas on démarre une session pour y stocker les informations de l'utilisateur
+$reponses = connectToDataBAse()->query('SELECT * FROM user');
+$reponse = $reponses->fetchall();
+//On vérifie si le formulaire a été rempli
+if(!empty($_POST)) {
+ //On nettoie les entrées du formulaire
+ foreach ($_POST as $key => $value) {
+   $_POST[$key] = htmlspecialchars($value);
+ }
+ //On récupère les utilisateurs stockés
+ foreach ($reponse as $key =>$user) {
+   if($user["first_name"] === $_POST["first_name"] && $user["last_name"] === $_POST["last_name"] && $_POST["user_password"] === $user["password"]) {
+     //On démarre une session pour y stocker les informations de l'utilisateur
      session_start();
      $_SESSION["user"] = $user;
-     // header("Location: homepage.php");
-     //On met un exit pour arrêter l'execution du script, autrement la redirection n'aura pas le temps de se faire
-     exit;
+     if ($_SESSION["user"]["status"] === "Secretary") {
+       header("Location: admin/homeSecretary.php");
+       exit;
+     }
+     if ($_SESSION["user"]["status"] === "Teacher"){
+       header("Location: admin/homeTeacher.php");
+       exit;
+     }
    }
- // header("Location: homeSecretary.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
- exit;
  }
- //Si le formulaire n'est pas rempli on renvoie l'utilisateur sur la page de login avce un message
- else {
- // header("Location: indexAdmin.php?message=Vous devez remplir les champs du formulaire");
+ header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
  exit;
- }
- var_dump($user);
-  ?>
+}
+//Si le formulaire n'est pas rempli on renvoie l'utilisateur sur la page de connexion avec un message d'erreur
+ // header("Location: index.php?message=Vous devez remplir les champs du formulaire");
+ exit;
+var_dump($_SESSION);
+?>
