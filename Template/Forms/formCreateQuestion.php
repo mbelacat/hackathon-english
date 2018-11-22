@@ -24,6 +24,7 @@
         <!-- Bouton pour ajouter la question -->
         <button type="submit" class="btn btn-success">Valider !</button>
     </form>
+<<<<<<< HEAD
 
 </div>
 
@@ -31,3 +32,6 @@
 <?php include "../footer.php"; ?>
 
 </div>
+=======
+</div>
+>>>>>>> 2f6432312e5ab974529bfb6304f27a35cda0b44a
