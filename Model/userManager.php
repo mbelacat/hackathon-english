@@ -9,6 +9,12 @@ function getUser($lastName) {
   return $user;
 }
 
+function getUsers($db){
+  $query = $db->query("SELECT * FROM user");
+  $result = $query->fetchall(PDO::FETCH_ASSOC);
+  return $result;
+}
+
 function addUser($user){
   $db = connectToDataBAse();
   $query = $db->prepare('INSERT INTO user(first_name, last_name, password, mail, phone, status) VALUES(:first_name, :last_name, :password, :mail, :phone, :status)');

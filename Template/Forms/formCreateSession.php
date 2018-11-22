@@ -13,12 +13,9 @@
     <label for="mail">L'adresse mail de l'apprenant</label>
     <input type="text" class="form-control" name="mail" id="mail">
   </div>
-  <!-- Le genearateur de clef -->
-  <!-- Need ! : le Bouton doit avoir l'action de généré la clef -->
-  <!-- <div class="form-group">
-    <label for="userCode">clef</label>
-    <button type="submit" class="btn lightBg">généré</button>
-    <input type="text" class="form-control"  name="Code" required>
-  </div> -->
+  <div class="form-group">
+    <label for="phone">N° de téléphone de l'apprenant</label>
+    <input type="number" class="form-control" name="phone" id="phone">
+  </div>
   <button type="submit" class="btn lightBg">Creer une session</button>
  </form>
