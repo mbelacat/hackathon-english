@@ -1,4 +1,8 @@
-<?php include "Template/header.php";?>
+<?php
+include "Template/header.php";
+// message if connect is good
+displayMessages();
+?>
 
   <section class="card mx-auto w-50">
     <div class="card-body">
