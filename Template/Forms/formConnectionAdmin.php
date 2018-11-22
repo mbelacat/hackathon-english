@@ -1,19 +1,19 @@
+<!-- Form Connection Admin (Secretary/Teacher) -->
 <?php
-require "../../Model/db.php";
-
-// $user = getUsers($db);
+require "loginAdmin.php";
 
  ?>
-
-<!-- Form Connection Admin (Secretary/Teacher) -->
-
 <div class="container col-5">
     <h3 class="text-center mb-4">Espace administration</h3>
     <!-- Need ! : <form action="? .php" -->
-    <form action="">
+    <form action="loginAdmin.php">
         <div class="form-group">
-            <label for="user_name">Nom d'utilisateur</label>
-            <input type="text" class="form-control" id="user_name" aria-describedby="nameHelp" placeholder="Entrez votre nom d'utilisateur">
+            <label for="first_name">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="first_name"  placeholder="Entrez votre nom d'utilisateur">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Prenom d'utilisateur</label>
+            <input type="text" class="form-control" id="last_name"  placeholder="Entrez votre nom d'utilisateur">
         </div>
         <div class="form-group">
             <label for="user_password">Mot de passe</label>

@@ -1,4 +1,3 @@
-<?php require "db.php" ?>
 <?php
 function getUser($lastName) {
   $db = connectToDataBAse();
