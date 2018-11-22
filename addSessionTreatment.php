@@ -6,6 +6,7 @@ require "Model/db.php";
 ?>
 
 <?php
+<<<<<<< HEAD
 if(!empty($_POST) && (isset($_POST))) {
    // if $_POST is not empty , we check the entries
    $_POST = clearForm($_POST);
@@ -46,3 +47,42 @@ if(!empty($_POST) && (isset($_POST))) {
    exit;
 }
  ?>
+=======
+if(!empty($_POST))
+{
+  // if $_POST is not empty , we secure the entries
+  clearForm($_POST);
+  // we add user to the db
+  if(addUser($_POST))
+  {
+    $user_id = getLastUserID();
+    $code = uniqCode(10);
+    // and we add session to the db
+    if(addSession($_POST, $user_id, $code))
+    {
+      // if addsession is true : we header locate to sessionList.php with success message
+      header("Location: sessionList.php?success=La session a bien été ajoutée");
+      exit;
+    }
+    else
+    {
+      // if addsession is false : we header locate to formCreateSession.php
+      header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
+      exit;
+    }
+  }
+  else
+  {
+    // if $_POST is empty : we header locate with error message to formCreateSession.php
+    header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
+    exit;
+  }
+}
+else
+{
+  // if adduser is false : we header locate to formCreateSession.php
+  header("Location: formCreateSession.php?errors= ici le code erreur");
+  exit;
+}
+?>
+>>>>>>> f246d3355a6cd47c11b2f8e048633d13b127df3d

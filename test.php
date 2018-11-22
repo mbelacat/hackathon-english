@@ -36,5 +36,5 @@ Here the "reponse #" will be replace by the information  -->
 
  <?php
  //Charge the footer
- include "Template/footer.php"
+ include "Template/footer.php";
   ?>
