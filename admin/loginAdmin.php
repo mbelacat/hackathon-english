@@ -31,10 +31,10 @@ if(!empty($_POST))
       }
     }
   }
-  header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
+  header("Location: indexAdmin.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
   exit;
 }
 //Si le formulaire n'est pas rempli on renvoie l'utilisateur sur la page de connexion avec un message d'erreur
-header("Location: index.php?message=Vous devez remplir les champs du formulaire");
+header("Location: indexAdmin.php?message=Vous devez remplir les champs du formulaire");
 exit;
 ?>

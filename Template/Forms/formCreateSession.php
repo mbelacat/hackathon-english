@@ -1,6 +1,6 @@
 <!-- need: form action?-->
 <!--if error, check path  -->
-<form class="w-50 mx-auto my-5" action="../../addSessionTreatment.php" method="post">
+<form class="w-50 mx-auto my-5" action="Treatment/Forms/addSessionTreatment.php" method="post">
   <div class="form-group">
     <label for="first_name">Le prenom de l'apprenant</label>
     <input type="text" class="form-control"  name="first_name" id="first_name" >

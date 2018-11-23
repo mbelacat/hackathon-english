@@ -1,5 +1,4 @@
-<div class="container">
-  <section>
+<section class="container">
     <h2>Bienvenue!</h2>
     <h3>Veuillez rentrer vos identifiants pour acceder à votre test.</h3>
     <div class="container-fluide">
@@ -21,5 +20,5 @@
           <button type="submit" class="btn btn-success">Accéder au test</button>
         </form>
       </div>
-  </section>
-</div>
+    </div>
+</section>
