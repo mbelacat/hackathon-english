@@ -1,4 +1,3 @@
-
 <div class="container col-6">
     <!-- form action a remplir quand toutes les pages seront crées-->
     <form method="post" action="createQuestionTraitement.php">
@@ -24,14 +23,4 @@
         <!-- Bouton pour ajouter la question -->
         <button type="submit" class="btn btn-success">Valider !</button>
     </form>
-<<<<<<< HEAD
-
 </div>
-
-<!-- On charge le footer -->
-<?php include "../footer.php"; ?>
-
-</div>
-=======
-</div>
->>>>>>> 2f6432312e5ab974529bfb6304f27a35cda0b44a
