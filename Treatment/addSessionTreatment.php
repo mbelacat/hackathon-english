@@ -1,7 +1,8 @@
 <?php
-require "Model/userManager.php";
-require "Model/sessionStudentManager.php";
-require "Service/formChecker.php";
+require "../Model/db.php";
+require "../Model/userManager.php";
+require "../Model/sessionStudentManager.php";
+require "../Service/formChecker.php";
 ?>
 
 <?php
@@ -18,13 +19,13 @@ if(!empty($_POST))
     if(addSession($_POST, $user_id, $code))
     {
       // if addsession is true : we header locate to sessionList.php with success message
-      header("Location: sessionList.php?success=La session a bien été ajoutée");
+      header("Location: ../sessionList.php?success=La session a bien été ajoutée");
       exit;
     }
     else
     {
       // if addsession is false : we header locate to formCreateSession.php
-      header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
+      header("Location: ../Template/Forms/formCreateSession.php?errors= ici le code erreur");
       exit;
     }
   }
