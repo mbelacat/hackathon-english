@@ -5,8 +5,8 @@
       <!-- title exams -->
       <h1 class="text-center m-0 mb-4">TEST D'ANGLAIS</h1>
       <!-- explanations for question -->
-      <p>Quelques consignes ...<br>
-      <br>
+      <h2>Quelques consignes ...</h2>
+      <p>
       Ce test est destiné à mesurer votre niveau de maïtrise de la grammaire, du vocabulaire, et votre compréhension écrite de la langue anglaise.<br>
       Il sera utilisé lors de votre entretien de motivation et permettra de mesurer votre parcours de formation en fin d'année.<br>
       Vous devez essayer de répondre au plus grand nombre de questions.<br>
