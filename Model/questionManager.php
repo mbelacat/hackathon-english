@@ -1,12 +1,20 @@
 <?php
 
 //Fonction qui récupère le dernière ID de la question
+<<<<<<< HEAD
+function getLastQuestionID($db){
+$selectLast = $db->query('SELECT id_question FROM question ORDER BY id_question DESC LIMIT 0, 1');
+$lastId = $selectLast->fetch(PDO::FETCH_ASSOC);
+$selectLast->closeCursor();
+return $lastId['id_question']; // $lastId['id'] cette variable contient le dernier id<br>
+=======
 function getLastQuestionID($db)
 {
   $selectLast = $db->query('SELECT id_question FROM question ORDER BY id_question DESC LIMIT 0, 1');
   $lastId = $selectLast->fetch(PDO::FETCH_ASSOC);
   return $lastId['id_question']; // $lastId['id'] cette variable contient le dernier id<br>
   $selectLast->closeCursor();
+>>>>>>> 6a92787a15eafac729c221b5831166e903673016
 }
 
 
@@ -30,14 +38,24 @@ function getQuestion($id, $db)
 }
 
 //Fonction qui ajoute une question en DB
-function addQuestion($question, $db)
+function addQuestion($db)
 {
+
     $query = $db->prepare("INSERT INTO question (question) VALUES(:question)");
     $result = $query->execute([
-        "question" => $question["question"]
+        "question" => $_POST["question"],
     ]);
-    return $result;
-    $query->closeCursor();
+
+}
+//Add Reponse to the datatbase
+function addReponse($question_id, $db)
+{
+     $query = $db->prepare("INSERT INTO reponse (reponse, question_id) VALUES(:reponse, :question_id)");
+     $result = $query->execute([
+        "reponse" => $_POST["reponse"],
+        "question_id" => $question_id
+      ]);
+
 }
 
 //Fonction pour modifier les valeurs d'une question en base de données
