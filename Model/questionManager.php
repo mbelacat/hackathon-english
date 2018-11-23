@@ -1,17 +1,12 @@
 <?php
 
 //Fonction qui récupère le dernière ID de la question
-function getLastQuestionID($db){
-
-
-$selectLast = $db->query('SELECT id_question FROM question ORDER BY id_question DESC LIMIT 0, 1');
-
-$lastId = $selectLast->fetch(PDO::FETCH_ASSOC);
-
-return $lastId['id_question']; // $lastId['id'] cette variable contient le dernier id<br>
-
-$selectLast->closeCursor();
-
+function getLastQuestionID($db)
+{
+  $selectLast = $db->query('SELECT id_question FROM question ORDER BY id_question DESC LIMIT 0, 1');
+  $lastId = $selectLast->fetch(PDO::FETCH_ASSOC);
+  return $lastId['id_question']; // $lastId['id'] cette variable contient le dernier id<br>
+  $selectLast->closeCursor();
 }
 
 
@@ -21,6 +16,7 @@ function getQuestions($db)
     $query = $db->query("SELECT * FROM question");
     $questions = $query->fetchall(PDO::FETCH_ASSOC);
     return $questions;
+    $query->closeCursor();
 }
 
 //Fonction qui récupère une seule question de la DB sur la base de son id
@@ -30,6 +26,7 @@ function getQuestion($id, $db)
     $query->execute([$id]);
     $question = $query->fetch(PDO::FETCH_ASSOC);
     return $question;
+    $query->closeCursor();
 }
 
 //Fonction qui ajoute une question en DB
@@ -40,6 +37,7 @@ function addQuestion($question, $db)
         "question" => $question["question"]
     ]);
     return $result;
+    $query->closeCursor();
 }
 
 //Fonction pour modifier les valeurs d'une question en base de données
@@ -51,6 +49,7 @@ function updateQuestion($question, $db)
         "question" => $question["question"]
     ]);
     return $result;
+    $query->closeCursor();
 }
 
 //Fonction pour supprimer une question en base de données
@@ -59,4 +58,5 @@ function deleteQuestion($id, $db)
     $query = $db->prepare("DELETE FROM question WHERE id = ?");
     $result = $query->execute([$id]);
     return $result;
+    $query->closeCursor();
 }

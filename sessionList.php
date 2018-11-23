@@ -7,7 +7,6 @@ require "Model/userManager.php";
 $db = connectToDataBAse();
 $apprenants = getUsers($db);
 $code = getSessions($db);
-
 include "Template/header.php";
 ?>
 <table class="table">
@@ -29,20 +28,20 @@ include "Template/header.php";
     if ($result["status"] === "user") {?>
   
     <tr>
-      <th scope="row"> <?php echo $result["last_name"]; ?> </th>
-      <td> <?php echo $result["first_name"]; ?> </td>
-  
-  <?php }}
-
+      <th scope="row"> <?php echo $result["last_name"] ?> </th>
+      <td scope="row"> <?php echo $result["first_name"] ?> </td>
+<?php
+   }}
   foreach ($code as $key => $theKey) {
-  ?>
-   <td>  <?php echo $theKey["code"]; ?> </td>
-   <td><?php echo $theKey["created_date"] ;  ?> </td>
+ ?>
+   <td scope="row">  <?php echo $theKey["code"] ?> </td>
+   <td scope="row"><?php echo $theKey["created_date"] ;  ?> </td>
    <!-- <i class="fas fa-trash-alt"></i> -->
-   <td><a href="<?php echo 'deleteSessionTreatment.php?id=' . $theKey['id_session']; ?>" class="btn btn-danger">Supprimer</a></td>
+   <td scope="row"><a href="<?php echo 'Treatment/deleteSessionTreatment.php?id=' . $theKey['id_session']; ?>" class="btn btn-danger">Supprimer</a></td>
 </tr>
-<?php }?>
-  </tbody>
-
+<?php
+}
+ ?>
+ </tbody>
 </table>
 <?php include "Template/footer.php"; ?>
