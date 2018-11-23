@@ -1,8 +1,8 @@
 <?php
-require "Model/userManager.php";
-require "Model/sessionStudentManager.php";
-require "Service/formChecker.php";
-require "Model/db.php";
+require "../Model/userManager.php";
+require "../Model/sessionStudentManager.php";
+require "../Service/formChecker.php";
+require "../Model/db.php";
 ?>
 
 <?php
@@ -22,7 +22,7 @@ if(!empty($_POST)) {
 
    if(!empty($errors)){
      // have we initialize anonymous session?and Why?
-         header("Location: createSessionStudent.php?message=$errors");
+         header("Location: ../createSessionStudent.php?message=$errors");
          exit;
     }else{
       // we add user to the db
@@ -32,22 +32,22 @@ if(!empty($_POST)) {
         // and we add session to the db
         if(addSession($_POST, $user_id, $code)){
         // if addsession is true : we header locate to sessionList.php with success message
-            header("Location: sessionList.php?success=Une session pour le test a bien été crée");
+            header("Location: ../sessionList.php?success=Une session pour le test a bien été crée");
             exit;
         }else{
           // if addsession is false : we header locate to createSessionStudent.php
-            header("Location:createSessionStudent.php?message=4");
+            header("Location: ../createSessionStudent.php?message=4");
             exit;
         }
       }else{
         // if $_POST is empty : we header locate with error message to createSessionStudent.php
-          header("Location: createSessionStudent.php?message=2");
+          header("Location: ../createSessionStudent.php?message=2");
           exit;
       }
 
     }
 }else{
-    header("Location: formCreateSession.php?message=0");
+    header("Location: Template/Forms/formCreateSession.php?message=0");
     exit;
 }
  ?>
