@@ -1,4 +1,5 @@
 <?php
+require "Service/errorManager.php";
 include "Template/header.php";
 require "Service/errorManager.php";
 displayMessages();
