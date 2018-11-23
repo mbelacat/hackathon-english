@@ -1,4 +1,4 @@
-<?php include "Template/header.php"; ?>
+<?php include "Template/header.php";?>
 <table class="table">
     <thead class="thead-dark">
         <tr>
