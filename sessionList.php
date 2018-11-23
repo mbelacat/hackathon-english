@@ -7,7 +7,6 @@ require "Model/userManager.php";
 $db = connectToDataBAse();
 $apprenants = getUsers($db);
 $code = getSessions($db);
-
 include "Template/header.php";
 ?>
 <table class="table">
@@ -30,18 +29,18 @@ include "Template/header.php";
     <tr>
       <th scope="row"> <?php echo $result["last_name"] ?> </th>
       <td scope="row"> <?php echo $result["first_name"] ?> </td>
-  <?php
+<?php
    }
-
   foreach ($code as $key => $theKey) {
-  ?>
+ ?>
    <td scope="row">  <?php echo $theKey["code"] ?> </td>
    <td scope="row"><?php echo $theKey["created_date"] ;  ?> </td>
    <!-- <i class="fas fa-trash-alt"></i> -->
-   <td scope="row"><a href="<?php echo 'deleteSessionTreatment.php?id=' . $theKey['id_session']; ?>" class="btn btn-danger">Supprimer</a></td>
+   <td scope="row"><a href="<?php echo 'Treatment/deleteSessionTreatment.php?id=' . $theKey['id_session']; ?>" class="btn btn-danger">Supprimer</a></td>
 </tr>
+<?php
 }
-  </tbody>
-
+ ?>
+ </tbody>
 </table>
 <?php include "Template/footer.php"; ?>
