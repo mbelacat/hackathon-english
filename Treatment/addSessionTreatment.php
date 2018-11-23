@@ -1,7 +1,8 @@
 <?php
-require "Model/userManager.php";
-require "Model/sessionStudentManager.php";
-require "Service/formChecker.php";
+require "../Model/db.php";
+require "../Model/userManager.php";
+require "../Model/sessionStudentManager.php";
+require "../Service/formChecker.php";
 ?>
 
 <?php
@@ -18,27 +19,27 @@ if(!empty($_POST))
     if(addSession($_POST, $user_id, $code))
     {
       // if addsession is true : we header locate to sessionList.php with success message
-      header("Location: sessionList.php?success=La session a bien été ajoutée");
+      header("Location: ../Admin/sessionList.php?success=La session a bien été ajoutée");
       exit;
     }
     else
     {
       // if addsession is false : we header locate to formCreateSession.php
-      header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
+      header("Location: ../Admin/createSessionStudent.php?errors= ici le code erreur");
       exit;
     }
   }
   else
   {
-    // if $_POST is empty : we header locate with error message to formCreateSession.php
-    header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
+    // if adduser is false : we header locate to formCreateSession.php
+    header("Location: ../Admin/createSessionStudent.php?errors= ici le code erreur");
     exit;
   }
 }
 else
 {
-  // if adduser is false : we header locate to formCreateSession.php
-  header("Location: formCreateSession.php?errors= ici le code erreur");
+  // if $_POST is empty : we header locate with error message to formCreateSession.php
+  header("Location: ../Admin/createSessionStudent.php?errors= ici le code erreur");
   exit;
 }
 ?>

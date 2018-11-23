@@ -26,7 +26,7 @@ if(!empty($_POST))
       }
       if ($_SESSION["user"]["status"] === "Teacher")
       {
-        header("Location: ../../homeTeacher.php");
+        header("Location: homeTeacher.php");
         exit;
       }
     }
