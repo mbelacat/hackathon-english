@@ -1,13 +1,13 @@
 <?php
 session_start();
-require "Model/db.php";
-require "Model/sessionStudentManager.php";
-require "Model/userManager.php";
+require "../Model/db.php";
+require "../Model/sessionStudentManager.php";
+require "../Model/userManager.php";
 // require "deleteSessionTreatment.php";
 $db = connectToDataBAse();
 $apprenants = getUsers($db);
 $code = getSessions($db);
-include "Template/header.php";
+include "../Template/header.php";
 ?>
 <table class="table">
   <thead class="thead-dark">
@@ -43,4 +43,4 @@ include "Template/header.php";
  ?>
  </tbody>
 </table>
-<?php include "Template/footer.php"; ?>
+<?php include "../Template/footer.php"; ?>
