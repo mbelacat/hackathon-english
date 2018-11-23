@@ -22,10 +22,7 @@
 
         <!-- Bouton pour ajouter la question -->
         <button type="submit" class="btn btn-success">Valider !</button>
-    </form>
-
-
-
+  </form>
 </div>
 
 <!-- On charge le footer -->
