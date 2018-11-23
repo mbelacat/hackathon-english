@@ -1,7 +1,7 @@
 <?php
-require "Model/userManager.php";
-require "Model/sessionStudentManager.php";
-require "Service/formChecker.php";
+require "../Model/userManager.php";
+require "../Model/sessionStudentManager.php";
+require "../Service/formChecker.php";
 ?>
 
 <?php
@@ -38,7 +38,7 @@ if(!empty($_POST))
 else
 {
   // if adduser is false : we header locate to formCreateSession.php
-  header("Location: formCreateSession.php?errors= ici le code erreur");
+  header("Location: Template/Forms/formCreateSession.php?errors= ici le code erreur");
   exit;
 }
 ?>
