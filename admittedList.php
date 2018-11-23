@@ -1,4 +1,13 @@
-<?php include "Template/header.php";?>
+<?php
+session_start();
+require "Model/db.php";
+require "Model/sessionStudentManager.php";
+require "Model/userManager.php";
+$db = connectToDataBAse();
+$apprenants = getUsers($db);
+$code = getSessions($db);
+include "Template/header.php";
+?>
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -9,24 +18,26 @@
         </tr>
     </thead>
     <tbody>
+    <?php
+    foreach ($apprenants as $key => $result)
+    {
+        if ($result["status"] === "user")
+        {
+        ?>
         <tr>
-            <th scope="row">Nom prénom</th>
-            <td>%</td>
-            <td>Niveau</td>
-            <td>Plus d'infos</td>
+            <th scope="row"> <?php echo $result["first_name"]; ?> <?php echo $result["last_name"]; ?> </th>
+            <?php
+        }
+    }
+    foreach ($code as $key => $theKey)
+    {
+        ?>
+            <td scope="row">  <?php echo $theKey["result"]; ?> </td>
+            <td scope="row"><?php echo $theKey["level"] ;  ?> </td>
         </tr>
-        <tr>
-        <th scope="row">Nom prénom</th>
-            <td>%</td>
-            <td>Niveau</td>
-            <td>Plus d'infos</td>
-        </tr>
-        <tr>
-        <th scope="row">Nom prénom</th>
-            <td>%</td>
-            <td>Niveau</td>
-            <td>Plus d'infos</td>
-        </tr>
+    <?php
+    }
+    ?>
     </tbody>
 </table>
 <?php include "Template/footer.php"; ?>
