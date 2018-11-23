@@ -1,4 +1,3 @@
-
 <div class="container col-6">
     <!-- form action a remplir quand toutes les pages seront crées-->
     <form method="post" action="createQuestionTraitement.php">
@@ -24,4 +23,8 @@
         <!-- Bouton pour ajouter la question -->
         <button type="submit" class="btn btn-success">Valider !</button>
     </form>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 22f86ec5bde9d4fb06ee68a7601fab35a9281a0f
