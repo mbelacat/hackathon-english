@@ -1,8 +1,8 @@
 <?php
-require "../Model/db.php";
-require "../Model/userManager.php";
-require "../Model/sessionStudentManager.php";
-require "../Service/formChecker.php";
+require "Model/db.php";
+require "Model/userManager.php";
+require "Model/sessionStudentManager.php";
+require "Service/formChecker.php";
 ?>
 
 <?php

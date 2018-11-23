@@ -10,13 +10,16 @@ function getUser($lastName)
   return $user;
 }
 
+// function to have all users
 function getUsers($db)
 {
   $query = $db->query("SELECT * FROM user");
   $result = $query->fetchall(PDO::FETCH_ASSOC);
+  $query->closeCursor();
   return $result;
 }
 
+// function to add a user
 function addUser($user)
 {
   $db = connectToDataBAse();
@@ -32,6 +35,7 @@ function addUser($user)
   return $result;
 }
 
+// fuction to have the last Id enter in the DB
 function getLastUserID()
 {
   $db = connectToDataBAse();
@@ -45,6 +49,7 @@ function getLastUserID()
 function deleteUser($id, $db) {
   $query = $db->prepare("DELETE FROM user WHERE id_user = ?");
   $result = $query->execute([$id]);
+  $query->closeCursor();
   return $result;
 }
 

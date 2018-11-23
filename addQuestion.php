@@ -1,9 +1,6 @@
 <?php
 include "Template/header.php";
- ?>
-<?php
+displayMessages();
 include "Template/Forms/formCreateQuestion.php";
- ?>
- <?php
- include "Template/footer.php";
-  ?>
+include "Template/footer.php";
+?>
