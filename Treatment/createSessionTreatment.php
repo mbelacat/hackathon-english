@@ -22,7 +22,7 @@ if(!empty($_POST)) {
 
    if(!empty($errors)){
      // have we initialize anonymous session?and Why?
-         header("Location: ../createSessionStudent.php?message=$errors");
+         header("Location: ../admin/createSessionStudent.php?message=$errors");
          exit;
     }else{
       // we add user to the db
@@ -36,12 +36,12 @@ if(!empty($_POST)) {
             exit;
         }else{
           // if addsession is false : we header locate to createSessionStudent.php
-            header("Location: ../createSessionStudent.php?message=4");
+            header("Location: ../admin/createSessionStudent.php?message=4");
             exit;
         }
       }else{
         // if $_POST is empty : we header locate with error message to createSessionStudent.php
-          header("Location: ../createSessionStudent.php?message=2");
+          header("Location: ../admin/createSessionStudent.php?message=2");
           exit;
       }
 
