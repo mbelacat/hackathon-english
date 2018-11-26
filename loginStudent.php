@@ -6,21 +6,8 @@ require "Model/userManager.php";
 require "Model/sessionStudentManager.php";
 require "Service/formChecker.php";
 
-
-// $db = connectToDataBAse();
-// $query = $db->prepare("SELECT * FROM user WHERE  first_name = :first_name AND last_name = :last_name AND code = :code");
-// $user = $query->execute(array(
-//   "first_name" => $_POST["first_name"],
-//   "last_name" => $_POST["last_name"],
-//   "code" => $_POST["code"]
-// ));
-// $query->closeCursor()
 $code = $_POST["code"];
-
-
 $userSession = getUserSession($code);
-// $session = getSession($userSession["user_id"]);
-
 if(!empty($_POST)) {
   //clear the form enter
   $_POST = clearForm($_POST);
