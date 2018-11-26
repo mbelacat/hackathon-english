@@ -1,32 +1,45 @@
 <?php
+
 //load page
 require "Model/db.php";
 require "Model/userManager.php";
+require "Model/sessionStudentManager.php";
 require "Service/formChecker.php";
 
-$reponses = connectToDataBAse()->query('SELECT u.last_name, u.first_name, s.code FROM user u INNER JOIN session s ON u.id_user = s.user_id ');
-$reponse = $reponses->fetchall();
-//Check if the form is completed
+
+// $db = connectToDataBAse();
+// $query = $db->prepare("SELECT * FROM user WHERE  first_name = :first_name AND last_name = :last_name AND code = :code");
+// $user = $query->execute(array(
+//   "first_name" => $_POST["first_name"],
+//   "last_name" => $_POST["last_name"],
+//   "code" => $_POST["code"]
+// ));
+// $query->closeCursor()
+$code = $_POST["code"];
+
+
+$userSession = getUserSession($code);
+// $session = getSession($userSession["user_id"]);
+
 if(!empty($_POST)) {
   //clear the form enter
   $_POST = clearForm($_POST);
  //Collect the stored users
- foreach ($reponse as $key =>$user) {
-   if($user["first_name"] === $_POST["first_name"] && $user["last_name"] === $_POST["last_name"] && $_POST["code"] === $user["code"]) {
-     //Start a session to store the user information stored session
+   if($userSession["first_name"] === $_POST["first_name"] && $userSession["last_name"] === $_POST["last_name"] && $_POST["code"] === $userSession["code"]) {
+     //Start a session to store the user information stored sessions
      session_start();
-     $_SESSION["session"] = $session;
-     //Start a session to store the user information stored answer
-     session_start();
-     $_SESSION["reponse"] = $reponseStudent;
+     $_SESSION = $userSession;
      header("Location: testStart.php");
      exit;
    }
- }
- header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom et prenom");
- exit;
+    session_destroy();
+     header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom et prenom");
+     exit;
 }
+else{
 //if the form isn't completed, we returns the user on the connexion page with a error message
- header("Location: index.php?message=Vous devez remplir les champs du formulaire");
+    header("Location: index.php?message=Vous devez remplir les champs du formulaire");
+    exit;
+ }
 
  ?>

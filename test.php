@@ -1,7 +1,18 @@
 <?php
 //Charge the header
+session_start();
+require "Model/db.php";
+require "Model/sessionStudentManager.php";
 include "Template/header.php";
+
+
+// $session = getSession("64");
+// var_dump($session);
+// var_dump($_GET($_POST));
+var_dump($_SESSION);
  ?>
+
+ <?php  ?>
  <!-- Here the "?" will be replace by the information  -->
 <p class="text-center"> Question ? </p>
 

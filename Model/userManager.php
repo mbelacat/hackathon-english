@@ -18,6 +18,14 @@ function getUsers($db)
   $query->closeCursor();
   return $result;
 }
+// function to have a userSession white last, first_name , code and user_id
+function getUserSession($code){
+  $reponses = connectToDataBAse()->prepare('SELECT u.last_name, u.first_name, s.code, s.user_id FROM user AS u INNER JOIN session AS s ON u.id_user = s.user_id WHERE code = ?');
+  $reponses->execute([$code]);
+  $userSession = $reponses->fetch(PDO::FETCH_ASSOC);
+  $reponses->closeCursor();
+return $userSession;
+}
 
 // function to add a user
 function addUser($user)

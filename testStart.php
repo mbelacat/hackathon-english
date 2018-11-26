@@ -1,5 +1,7 @@
 <?php
+session_start();
 include "Template/header.php";
+var_dump($_SESSION);
 ?>
 
   <section class="card mx-auto w-50">
