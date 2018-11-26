@@ -1,6 +1,6 @@
 <div class="container col-6">
     <!-- form action a remplir quand toutes les pages seront crées-->
-    <form method="post" action="createQuestionTraitement.php">
+    <form method="post" action="Treatment/createQuestionTreatement.php">
         <!-- Input ou la prof inscrit la question qu'elle va poser lors du quizz -->
         <div class="form-group">
             <label for="question">Question:</label>
@@ -22,9 +22,8 @@
 
         <!-- Bouton pour ajouter la question -->
         <button type="submit" class="btn btn-success">Valider !</button>
-    </form>
-<<<<<<< HEAD
+  </form>
 </div>
-=======
-</div>
->>>>>>> 22f86ec5bde9d4fb06ee68a7601fab35a9281a0f
+
+<!-- On charge le footer -->
+<?php include "Template/footer.php"; ?>
